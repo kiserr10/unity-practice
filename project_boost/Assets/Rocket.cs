@@ -25,6 +25,9 @@ public class Rocket : MonoBehaviour {
 		switch (collision.gameObject.tag){
 			case "Friendly":
 				print("friendly");
+				break; 
+			case "Fuel":
+				print("fuel bitches");
 				break;
 			default:
 				print("You're DEAD");
@@ -33,7 +36,9 @@ public class Rocket : MonoBehaviour {
 	}
 
 	private void Thrust () {
+
 		float thrustThisFrame = mainThrust * Time.deltaTime;
+
 		if (Input.GetKey(KeyCode.Space)) {
 			rigidBody.AddRelativeForce(Vector3.up * thrustThisFrame);
 			if (!audioSource.isPlaying){
