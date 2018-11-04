@@ -598,6 +598,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114043835239756060, guid: 2b4d49e0e3b5a4944b71d318e8b5bdfe,
+        type: 2}
+      propertyPath: deathExplosion
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dcd87c45f47a425d95a0b53c412f0b8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b4d49e0e3b5a4944b71d318e8b5bdfe, type: 2}
   m_IsPrefabParent: 0

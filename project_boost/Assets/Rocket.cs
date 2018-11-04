@@ -7,6 +7,8 @@ public class Rocket : MonoBehaviour {
 
 	[SerializeField] float rcsThrust = 100f;
 	[SerializeField] float mainThrust = 1000f;
+	[SerializeField] AudioClip mainEngine;
+	[SerializeField] AudioClip deathExplosion;
 	
 	enum State { Alive, Dying, Transcending };
 
@@ -14,7 +16,6 @@ public class Rocket : MonoBehaviour {
 	AudioSource audioSource;
 	State state;
 	
-
 	// Use this for initialization
 
 	void Start () {
@@ -33,8 +34,8 @@ public class Rocket : MonoBehaviour {
 	}	
 
 	void OnCollisionEnter(Collision collision){
-		
-		if(!isAlive()){ return; }
+
+		if(!isAlive()) { return; }
 
 		switch (collision.gameObject.tag){
 			case "Friendly":
@@ -52,6 +53,7 @@ public class Rocket : MonoBehaviour {
 			default:
 				state = State.Dying;
 				audioSource.Stop();
+				audioSource.PlayOneShot(deathExplosion);
 				Invoke("LoadFirstLevel", 1f);
 				break;
 		}
@@ -74,14 +76,17 @@ public class Rocket : MonoBehaviour {
 	private void Thrust (float thrust) {
 		float thrustThisFrame = mainThrust * Time.deltaTime;
 		if (Input.GetKey(KeyCode.Space) && isAlive()) {
-			rigidBody.AddRelativeForce(Vector3.up * thrust);
-			if (!audioSource.isPlaying){
-				audioSource.Play();
-			}
+			ApplyThrust(thrustThisFrame);
 		}
 		if (Input.GetKeyUp(KeyCode.Space)) {
 			audioSource.Stop();
 		}
+	}
+	private void ApplyThrust (float thrust) {
+		rigidBody.AddRelativeForce(Vector3.up * thrust);
+			if (!audioSource.isPlaying){
+				audioSource.PlayOneShot(mainEngine);
+			}
 	}
 	private void Reverse (float thrust) {
 		if(Input.GetKey(KeyCode.W)) {
@@ -89,7 +94,7 @@ public class Rocket : MonoBehaviour {
 		}
 	}
 
-	private void Rotate() {
+	private void Rotate () {
 		//take manual control of rotation
 		rigidBody.freezeRotation = true;
 		
