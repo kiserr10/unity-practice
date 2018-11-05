@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27822c40426fd4cae9a2f4e62fb688fa, type: 3}
+  m_Name: GameOver
+  m_EditorClassIdentifier: 
+  storyText: 'MATT AND ROSS CAUGHT YOU!!!
+
+
+    YOU DUMB MOTHERFUCKER!!!!
+
+
+    Press 1. to Restart the Game'
+  nextStates:
+  - {fileID: 11400000, guid: 1b70fd43bc1e043c9a913757b641b764, type: 2}
