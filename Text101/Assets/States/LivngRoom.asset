@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27822c40426fd4cae9a2f4e62fb688fa, type: 3}
+  m_Name: LivngRoom
+  m_EditorClassIdentifier: 
+  storyText: 'Rajah''s in the Living Room!!!
+
+
+    Where would you like to go?
+
+
+    Press 1. for the Kitchen
+
+
+    Press 2. for the Patio
+
+
+    Press 3. for Ross'' room
+
+
+    Press 4. for Matt''s room '
+  nextStates:
+  - {fileID: 11400000, guid: 547d1daf6121541c798853ac28a60743, type: 2}
+  - {fileID: 11400000, guid: e5890da1dba5f4bb9942448a80c91c16, type: 2}
+  - {fileID: 11400000, guid: e7bd09f983f994c34a0f8a51f8324a69, type: 2}
+  - {fileID: 11400000, guid: 1e4374d4acb934336b4e568fe1df098f, type: 2}

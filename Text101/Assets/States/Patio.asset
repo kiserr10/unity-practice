@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27822c40426fd4cae9a2f4e62fb688fa, type: 3}
+  m_Name: Patio
+  m_EditorClassIdentifier: 
+  storyText: 'Rajah''s on the Patio!
+
+
+    Where would you like to go?
+
+
+    Press 1. Living Room
+
+
+    Press 2. Kitchen
+
+'
+  nextStates:
+  - {fileID: 11400000, guid: 50ac7e7dc592f4529bc220b971d866d7, type: 2}
+  - {fileID: 11400000, guid: 547d1daf6121541c798853ac28a60743, type: 2}
+  - {fileID: 0}

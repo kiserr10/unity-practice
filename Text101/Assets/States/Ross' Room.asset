@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27822c40426fd4cae9a2f4e62fb688fa, type: 3}
+  m_Name: Ross' Room
+  m_EditorClassIdentifier: 
+  storyText: 'Rajah''s in Ross'' Room!!
+
+
+    Where would you like to go?
+
+
+    Press 1. for Matt''s Room
+
+
+    Press 2. for Living room
+
+'
+  nextStates:
+  - {fileID: 11400000, guid: 1e4374d4acb934336b4e568fe1df098f, type: 2}
+  - {fileID: 11400000, guid: 50ac7e7dc592f4529bc220b971d866d7, type: 2}
